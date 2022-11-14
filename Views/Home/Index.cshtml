@@ -1,0 +1,41 @@
+﻿ @using Contentful.Core.Models;
+
+@model ContentfulCollection<TwitterUser>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Twitter Data</title>
+   
+</head>
+<body>
+
+    <h1>Twitter Followers</h1>
+
+    @{var followers_counter = 0;}
+
+    <div class="header">
+    @foreach (var card in Model)
+    {
+    <div class="card">
+        <h4 class="name">@card.name</h4>
+        <p class="username">@@@card.username</p>
+        <p class="id">id: @card.id</p>
+    </div>
+    followers_counter++;
+    }
+    </div>
+
+    <h4>Elias Grinwis Plaat Stultjes has @followers_counter followers on Twitter</h4>
+    <p class="link"><a href="https://twitter.com/EliasGrinwis">https://twitter.com/EliasGrinwis</a></p>
+
+
+
+</body>
+</html>
+
+
+    
+

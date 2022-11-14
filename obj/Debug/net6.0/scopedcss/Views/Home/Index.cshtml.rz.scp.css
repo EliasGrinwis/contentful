@@ -1,0 +1,48 @@
+h1[b-ye3wv6m0e3] {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+h3[b-ye3wv6m0e3] {
+  text-align: center;
+}
+
+h4[b-ye3wv6m0e3] {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.header[b-ye3wv6m0e3] {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.card[b-ye3wv6m0e3] {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: #1d9bf0;
+  color: white;
+  width: 350px;
+  margin: 10px;
+  outline: none;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.name[b-ye3wv6m0e3] {
+  text-align: center;
+}
+
+.username[b-ye3wv6m0e3] {
+  text-align: center;
+}
+
+.link[b-ye3wv6m0e3] {
+  text-align: center;
+}
