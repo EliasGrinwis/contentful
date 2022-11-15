@@ -1,16 +1,30 @@
 using System.Diagnostics;
-using Contentful.Core;
-using Contentful.Core.Models;
-using Contentful.Core.Models.Management;
 using Newtonsoft.Json;
 using Project.Models;
 
-public class Twitter_Data_Lists
+public class TwitterData
 {
+
+    public String execute_powershell_script()
+    {
+        Process p = new Process();
+        ProcessStartInfo startInfo = new ProcessStartInfo();
+        startInfo.FileName = "powershell.exe";
+        startInfo.Arguments = "-file Script.ps1";
+        p.StartInfo = startInfo;
+        p.StartInfo.RedirectStandardOutput = true;
+        p.Start();
+        string output = p.StandardOutput.ReadToEnd();
+
+        return output;
+    }
+
+
     public List<String> twitter_id_list_function()
     {
-        ManageData manageData = new ManageData();
-        var output = manageData.test_powershell();
+        //ManageData manageData = new ManageData();
+        //var output = manageData.test_powershell();
+        var output = execute_powershell_script();
 
         var twitterUsers = JsonConvert.DeserializeObject<List<TwitterUser>>(output); // list
 
@@ -28,8 +42,9 @@ public class Twitter_Data_Lists
 
     public List<String> twitter_name_list_function()
     {
-        ManageData manageData = new ManageData();
-        var output = manageData.test_powershell();
+        //ManageData manageData = new ManageData();
+        //var output = manageData.test_powershell();
+        var output = execute_powershell_script();
 
         var twitterUsers = JsonConvert.DeserializeObject<List<TwitterUser>>(output); // list
 
@@ -47,8 +62,9 @@ public class Twitter_Data_Lists
 
     public List<String> twitter_username_list_function()
     {
-        ManageData manageData = new ManageData();
-        var output = manageData.test_powershell();
+        //ManageData manageData = new ManageData();
+        //var output = manageData.test_powershell();
+        var output = execute_powershell_script();
 
         var twitterUsers = JsonConvert.DeserializeObject<List<TwitterUser>>(output); // list
 

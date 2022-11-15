@@ -25,10 +25,10 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
-// CALL THE METHOD IN THE CLASS ManageData
-ManageData manageData = new ManageData();
-//manageData.Make_Content_Type();
-
+// HERE WE SETUP CONTENTFUL
+ContentfulSetup contentfulSetup = new ContentfulSetup();
+//contentfulSetup.create_content_type();
+//contentfulSetup.create_entries();
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();

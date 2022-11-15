@@ -1,17 +1,14 @@
 using System.Diagnostics;
 using Contentful.Core;
 using Contentful.Core.Models;
-using Contentful.Core.Models.Management;
-using Newtonsoft.Json;
-using Project.Models;
 
-public class ManageData
+public class ContentfulSetup
 {
 
     String contentTypeId = "TwitterFollowers";
     int contentTypeVersion = 7;
 
-    public async void Make_Content_Type()
+    public async void create_content_type()
     {
 
         var httpClient = new HttpClient();
@@ -54,18 +51,25 @@ public class ManageData
         var result_contentType = await client.CreateOrUpdateContentType(contentType);
         await client.ActivateContentType(contentTypeId, version: result_contentType.SystemProperties.Version!.Value);
 
-        // Loop 13 times to make 13 entries
+    }
 
-        Twitter_Data_Lists twitter_Data_Lists = new Twitter_Data_Lists();
-        var twitter_id_list = twitter_Data_Lists.twitter_id_list_function();
-        var twitter_name_list = twitter_Data_Lists.twitter_name_list_function();
-        var twitter_username_list = twitter_Data_Lists.twitter_username_list_function();
+    public async void create_entries()
+    {
+
+        var httpClient = new HttpClient();
+        var client = new ContentfulManagementClient(httpClient, "CFPAT-YXYuAEil2xQAg_cE3ngWeVupEuLue2aSI5HCxE-iUaU", "jlvdks7mf5c1");
+
+        TwitterData twitterData = new TwitterData();
+        var twitter_id_list = twitterData.twitter_id_list_function();
+        var twitter_name_list = twitterData.twitter_name_list_function();
+        var twitter_username_list = twitterData.twitter_username_list_function();
 
         var counter = 1;
         var entry = new Entry<dynamic>();
 
+        // Loop 13 times to make 13 entries
         foreach (var result in twitter_id_list.Zip(twitter_name_list, (first, second) => new { object1 = first, object2 = second })
-                          .Zip(twitter_username_list, (first, second) => new { object1 = first.object1, object2 = first.object2, object3 = second }))
+            .Zip(twitter_username_list, (first, second) => new { object1 = first.object1, object2 = first.object2, object3 = second }))
         {
 
             String new_id = "user" + counter;
@@ -96,23 +100,7 @@ public class ManageData
 
             await client.PublishEntry(new_id, 1);
             counter++;
-
         }
-    }
-
-
-    public String test_powershell()
-    {
-        Process p = new Process();
-        ProcessStartInfo startInfo = new ProcessStartInfo();
-        startInfo.FileName = "powershell.exe";
-        startInfo.Arguments = "-file C:\\Users\\Elias\\OneDrive\\Documenten\\Script.ps1";
-        p.StartInfo = startInfo;
-        p.StartInfo.RedirectStandardOutput = true;
-        p.Start();
-        string output = p.StandardOutput.ReadToEnd();
-
-        return output;
     }
 }
 
