@@ -22,4 +22,4 @@ jobs:
         run: docker build -t ${{ secrets.DOCKER_USER }}/twitter-application:latest .
 Z
       - name: Upload container to Docker Hub with Push
-        run: docker push ${{ secrets.DOCKER_USER }}/twitter_application:latest
+        run: docker push ${{ secrets.DOCKER_USER }}/twitter-application:latest
