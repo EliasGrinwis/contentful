@@ -23,3 +23,35 @@ jobs:
 
       - name: Upload container to Docker Hub with Push
         run: docker push ${{ secrets.DOCKER_USER }}/twitter-application:latest
+
+      - name: Set context to Okteto Cloud
+        uses: okteto/context@latest
+        with:
+          token: ${{ secrets.OKTETO_TOKEN }}
+
+      - name: Deploy your preview environment
+        uses: okteto/deploy-preview@latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          name: staging-${{ github.event.number }}-eliasgrinwis
+          scope: personal
+          timeout: 15m
+
+      - uses: nev7n/wait_for_response@v1
+        with:
+          url: https://api-staging-${{ github.event.number }}-eliasgrinwis.cloud.okteto.net
+        responseCode: 200
+        timeout: 4000
+
+      - name: Run API tests agaisnt Staging Namespace
+        run: pytest
+        env:
+          STAGING_COUCHDB_URL: https://api-staging-${{ github.event.number }}-eliasgrinwis.cloud.okteto.net
+
+      - name: Build and deploy application container to Okteto Flask Namespace
+        if: ${{ github.event_name == 'push' }}
+        uses: okteto/deploy-stack@master
+        with:
+          name: okteto-flask-app
+          build: true
