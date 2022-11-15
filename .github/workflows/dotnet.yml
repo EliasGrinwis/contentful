@@ -6,7 +6,7 @@ jobs:
   delivery:
     runs-on: windows-latest
     name: build, test, deliver container
-     steps:
+    steps:
       - name: Check out repository
         uses: actions/checkout@v1
 
