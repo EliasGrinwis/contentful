@@ -19,7 +19,7 @@ jobs:
         run: docker login -u ${{ secrets.DOCKER_USER }} -p ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Docker Build
-        run: docker build -t ${{ secrets.DOCKER_USER }}/twitter-app:latest .
+        run: docker build -t ${{ secrets.DOCKER_USER }}/twitter-application:latest .
 
       - name: Upload container to Docker Hub with Push
-        run: docker push ${{ secrets.DOCKER_USER }}/twitter-app:latest
+        run: docker push ${{ secrets.DOCKER_USER }}/twitter-application:latest

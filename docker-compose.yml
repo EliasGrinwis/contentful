@@ -1,6 +1,6 @@
 version: "3.9"
 services:
-  randomizer-service:
-    image: eliasgps/twitter-app
+  twitter:
+    image: eliasgps/twitter-application
     ports:
       - "8085:80"
