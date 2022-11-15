@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Elias\\OneDrive\\Thomas More leerstof 2\\DevOps & Security\\Project\\Project.csproj": {}
+    "C:\\Users\\Elias\\OneDrive\\Thomas More leerstof 2\\DevOps & Security\\Project\\Project.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Elias\\OneDrive\\Thomas More leerstof 2\\DevOps & Security\\Project\\Project.csproj": {
+    "C:\\Users\\Elias\\OneDrive\\Thomas More leerstof 2\\DevOps & Security\\Project\\Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Elias\\OneDrive\\Thomas More leerstof 2\\DevOps & Security\\Project\\Project.csproj",
+        "projectUniqueName": "C:\\Users\\Elias\\OneDrive\\Thomas More leerstof 2\\DevOps & Security\\Project\\Project.csproj",
         "projectName": "Project",
-        "projectPath": "c:\\Users\\Elias\\OneDrive\\Thomas More leerstof 2\\DevOps & Security\\Project\\Project.csproj",
+        "projectPath": "C:\\Users\\Elias\\OneDrive\\Thomas More leerstof 2\\DevOps & Security\\Project\\Project.csproj",
         "packagesPath": "C:\\Users\\Elias\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Elias\\OneDrive\\Thomas More leerstof 2\\DevOps & Security\\Project\\obj\\",
+        "outputPath": "C:\\Users\\Elias\\OneDrive\\Thomas More leerstof 2\\DevOps & Security\\Project\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Elias\\AppData\\Roaming\\NuGet\\NuGet.Config",

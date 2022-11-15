@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "E/RLdJbfvKvfij8JVNz5JcQXdHB+SbLl0j8nWW1Thyux1wCG9yjWDsyNsCPMedKXWDTSCQMV/q9TFNKuA3KILg==",
+  "dgSpecHash": "U8ezLBAusqSND+tUUJfz0oO8IrrGc4QFe8zE2mW0d23gWiIOGraCg4ZsFqBOAKQxE7QOPEekrJ3+1SXnW1mmqA==",
   "success": true,
-  "projectFilePath": "c:\\Users\\Elias\\OneDrive\\Thomas More leerstof 2\\DevOps & Security\\Project\\Project.csproj",
+  "projectFilePath": "C:\\Users\\Elias\\OneDrive\\Thomas More leerstof 2\\DevOps & Security\\Project\\Project.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Elias\\.nuget\\packages\\autofac\\4.9.4\\autofac.4.9.4.nupkg.sha512",
     "C:\\Users\\Elias\\.nuget\\packages\\cliwrap\\3.5.0\\cliwrap.3.5.0.nupkg.sha512",
