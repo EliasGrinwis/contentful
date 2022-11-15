@@ -4,7 +4,7 @@ on: push
 
 jobs:
   delivery:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     name: build, test, deliver container
     steps:
       - name: Check out repository
