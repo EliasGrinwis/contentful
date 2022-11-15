@@ -18,8 +18,8 @@ if (!app.Environment.IsDevelopment())
 
 // HERE WE SETUP CONTENTFUL
 ContentfulSetup contentfulSetup = new ContentfulSetup();
-contentfulSetup.create_content_type();
-contentfulSetup.create_entries();
+//contentfulSetup.create_content_type();
+//contentfulSetup.create_entries();
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
