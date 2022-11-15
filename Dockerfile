@@ -1,5 +1,17 @@
-FROM mcr.microsoft.com/dotnet/sdk:6.0
+FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 
-COPY bin/Release/net6.0/publish .
+WORKDIR /src
 
-ENTRYPOINT [ "dotnet", "Project.dll"]
+COPY Project.csproj .
+
+RUN dotnet restore "Project.csproj"
+
+COPY . .
+
+RUN dotnet publish "Project.csproj" -c release -o /publish
+
+FROM mcr.microsoft.com/dotnet/aspnet:6.0 as final
+WORKDIR /app
+COPY --from=build /publish .
+
+ENTRYPOINT [ "dotnet", "Project.dll" ]
