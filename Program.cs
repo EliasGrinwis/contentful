@@ -1,13 +1,4 @@
-//using System.Management.Automation;
-using CliWrap;
-using CliWrap.Buffered;
 using Contentful.AspNetCore;
-using Contentful.Core;
-using Contentful.Core.Models;
-using Newtonsoft.Json;
-using Project.Models;
-using System;
-using System.Diagnostics;
 
 var builder = WebApplication.CreateBuilder(args);
 
