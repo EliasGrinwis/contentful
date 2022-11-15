@@ -45,7 +45,7 @@ jobs:
 
       - name: Build and deploy application container to Okteto Flask Namespace
         if: ${{ github.event_name == 'push' }}
-        uses: okteto/deploy-stack@master
+        uses: okteto/deploy-stack@main
         with:
           name: okteto-flask-app
           build: true
