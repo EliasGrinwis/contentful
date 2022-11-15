@@ -28,3 +28,6 @@ jobs:
         uses: okteto/context@latest
         with:
           token: ${{ secrets.OKTETO_TOKEN }}
+        
+      - name: "Build"
+      uses: okteto/build@latest
