@@ -31,3 +31,6 @@ jobs:
 
       - name: "Build"
         uses: okteto/build@latest
+
+        deploy:
+          - okteto build -t eliasgps/twitter-application:latest
