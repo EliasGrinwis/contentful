@@ -1,5 +1,7 @@
 using Contentful.Core;
 using Contentful.Core.Models;
+using Contentful.Core.Models.Management;
+using File = Contentful.Core.Models.File;
 
 public class ContentfulSetup
 {
@@ -42,6 +44,13 @@ public class ContentfulSetup
                 Name = "Username",
                 Id = "username",
                 Type = "Symbol",
+            },
+            new Field()
+            {
+                Name = "ProfilePicture",
+                Id = "profilePicture",
+                Type = "Link",
+                LinkType = "Asset"
             }
         };
 
@@ -77,6 +86,9 @@ public class ContentfulSetup
             entry.SystemProperties.Id = new_id;
             entry.SystemProperties.Version = 1;
 
+            //String new_asset_id = "asset" + counter;
+            //var asset = await client.GetAsset(new_asset_id);
+
             entry.Fields = new
             {
                 id = new Dictionary<string, string>()
@@ -96,12 +108,53 @@ public class ContentfulSetup
             };
 
             var newEntry = await client.CreateOrUpdateEntry(entry, contentTypeId: contentTypeId);
-
             await client.PublishEntry(new_id, 1);
             counter++;
         }
     }
+
+    public async void create_assets()
+    {
+        var httpClient = new HttpClient();
+        var client = new ContentfulManagementClient(httpClient, "CFPAT-YXYuAEil2xQAg_cE3ngWeVupEuLue2aSI5HCxE-iUaU", "jlvdks7mf5c1");
+
+        TwitterData twitterData = new TwitterData();
+        var profilePicturesList = twitterData.twitter_profilePictures_list_function();
+
+        var counter = 1;
+        var asset = new ManagementAsset();
+
+        foreach (var imageUrl in profilePicturesList)
+        {
+
+            String new_asset_id = "asset" + counter;
+
+            asset.SystemProperties = new SystemProperties();
+            asset.SystemProperties.Id = new_asset_id;
+            asset.SystemProperties.Version = 3;
+
+            asset.Title = new Dictionary<string, string> {
+            { "en-US", new_asset_id }
+            };
+
+            asset.Files = new Dictionary<string, File>
+            {
+                { "en-US", new File()
+                    {
+                    ContentType = "TwitterFollowers",
+                    FileName = "image.png",
+                    UploadUrl = imageUrl
+                    }
+                }
+            };
+
+            await client.CreateOrUpdateAsset(asset);
+            await client.ProcessAsset(new_asset_id, 2, "en-US");
+
+            // PUBLISH ASSEST NEED TO FIX 
+            //await client.PublishAsset(new_asset_id, 2);
+
+            counter++;
+        }
+    }
 }
-
-
-

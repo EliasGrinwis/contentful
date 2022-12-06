@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "06FwWkTdiq5wSHNyeCXhOPks0ks5/frz+wjhElhDVnI=",
+  "Hash": "UbT3MrsgVG6DeCXOup/LK7u8tU9dq5GXyTwfmhC5skw=",
   "Source": "Project",
   "BasePath": "_content/Project",
   "Mode": "Default",
@@ -83,6 +83,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\Elias\\OneDrive\\Thomas More leerstof 2\\DevOps & Security\\Project\\wwwroot\\images\\avatar.PNG",
+      "SourceId": "Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Elias\\OneDrive\\Thomas More leerstof 2\\DevOps & Security\\Project\\wwwroot\\",
+      "BasePath": "_content/Project",
+      "RelativePath": "images/avatar.PNG",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\avatar.PNG"
+    },
+    {
+      "Identity": "C:\\Users\\Elias\\OneDrive\\Thomas More leerstof 2\\DevOps & Security\\Project\\wwwroot\\images\\Twitter_logo.png",
+      "SourceId": "Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Elias\\OneDrive\\Thomas More leerstof 2\\DevOps & Security\\Project\\wwwroot\\",
+      "BasePath": "_content/Project",
+      "RelativePath": "images/Twitter_logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Twitter_logo.png"
     },
     {
       "Identity": "C:\\Users\\Elias\\OneDrive\\Thomas More leerstof 2\\DevOps & Security\\Project\\wwwroot\\js\\site.js",

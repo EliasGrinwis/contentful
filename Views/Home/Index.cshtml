@@ -11,7 +11,7 @@
    
 </head>
 <body>
-
+    
     <h1>Twitter Followers</h1>
 
     @{var followers_counter = 0;}
@@ -20,18 +20,34 @@
     @foreach (var card in Model)
     {
     <div class="card">
+        @* <p>@card.profilePicture</p> *@
+        <img class="twitter-logo" src="/images/Twitter_logo.png" alt="Twitter Logo">
+        <img class="profile-picture" src="/images/avatar.PNG" alt="logo">
         <h4 class="name">@card.name</h4>
-        <p class="username">@@@card.username</p>
-        <p class="id">id: @card.id</p>
+        <div class="flex">
+            <div>   
+                <p>Username:</p>
+                <p>Id:</p>
+            </div>
+            <div class="name-id">
+                <p>@@@card.username</p>
+                <p>@card.id</p>
+            </div>
+        </div>
+        <div class="button-parent">
+            <a href="https://twitter.com/@card.username">
+                <button>
+                    Visit profile
+                </button>
+            </a>
+        </div>
     </div>
     followers_counter++;
     }
     </div>
-
+    
     <h4>Elias Grinwis Plaat Stultjes has @followers_counter followers on Twitter</h4>
-    <p class="link"><a href="https://twitter.com/EliasGrinwis">https://twitter.com/EliasGrinwis</a></p>
-
-
+    <p class="link"><a href="https://twitter.com/EliasGrinwis">https://twitter.com/EliasGrinwis</a></p>    
 
 </body>
 </html>

@@ -24,7 +24,7 @@ h4[b-ye3wv6m0e3] {
 
 .card[b-ye3wv6m0e3] {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  background-color: #1d9bf0;
+  background-color: black;
   color: white;
   width: 350px;
   margin: 10px;
@@ -34,14 +34,55 @@ h4[b-ye3wv6m0e3] {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
+}
+
+.twitter-logo[b-ye3wv6m0e3] {
+  display: -webkit-box;
+  margin-left: auto;
+  height: auto;
+  width: 30px;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.profile-picture[b-ye3wv6m0e3] {
+  width: 140px;
+  height: auto;
+}
+
+.flex[b-ye3wv6m0e3] {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.name-id[b-ye3wv6m0e3] {
+  text-align: right;
+  text-decoration: underline;
 }
 
 .name[b-ye3wv6m0e3] {
   text-align: center;
 }
 
-.username[b-ye3wv6m0e3] {
-  text-align: center;
+button[b-ye3wv6m0e3] {
+  background-color: #1d9bf0;
+  border: 1px solid #1d9bf0;
+  color: white;
+  border-radius: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  text-decoration: none;
+}
+
+.button-parent[b-ye3wv6m0e3] {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .link[b-ye3wv6m0e3] {

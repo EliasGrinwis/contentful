@@ -78,6 +78,26 @@ public class TwitterData
 
         return twitter_username_list;
     }
+
+    public List<String> twitter_profilePictures_list_function()
+    {
+        var profilePictures = new List<string> {
+        "https://pbs.twimg.com/profile_images/1574797189951397889/tSjb4iZZ_400x400.jpg",
+        "https://pbs.twimg.com/profile_images/1243918575112531968/0efRkgVU_400x400.png",
+        "https://pbs.twimg.com/profile_images/1574811963024195585/zAqk41JB_400x400.jpg",
+        "https://pbs.twimg.com/profile_images/1574491879047151631/Ih4ISTbT_400x400.jpg",
+        "https://abs.twimg.com/sticky/default_profile_images/default_profile_400x400.png",
+        "https://pbs.twimg.com/profile_images/1575027994824941574/hH8OviHJ_400x400.jpg",
+        "https://pbs.twimg.com/profile_images/1354358986439593984/r20mt5lK_400x400.jpg",
+        "https://pbs.twimg.com/profile_images/1576229345626046467/9mJp5QhR_400x400.jpg",
+        "https://pbs.twimg.com/profile_images/1576507818441596928/xMKDEDe4_400x400.jpg",
+        "https://pbs.twimg.com/profile_images/1576993821606514695/o-Zh6w3z_400x400.jpg",
+        "https://pbs.twimg.com/profile_images/1575187416859787270/oQQUSomK_400x400.jpg"
+        };
+
+        return profilePictures;
+
+    }
 }
 
 
