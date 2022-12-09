@@ -1,4 +1,5 @@
-﻿ @using Contentful.Core.Models;
+﻿@using Contentful.Core.Models;
+@using Newtonsoft.Json
 
 @model ContentfulCollection<TwitterUser>
 
@@ -16,13 +17,18 @@
 
     @{var followers_counter = 0;}
 
+    
+
     <div class="header">
     @foreach (var card in Model)
     {
+    var jsonString = JsonConvert.SerializeObject(@card.profilePicture);
+    var deserializedObject = JsonConvert.DeserializeObject<dynamic>(jsonString);
+    
+    //<img class="profile-picture" src="@card.profilePicture" alt="logo">
     <div class="card">
-        @* <p>@card.profilePicture</p> *@
         <img class="twitter-logo" src="/images/Twitter_logo.png" alt="Twitter Logo">
-        <img class="profile-picture" src="/images/avatar.PNG" alt="logo">
+        <img class="profile-picture" src="@deserializedObject.fields.file.url" alt="logo">
         <h4 class="name">@card.name</h4>
         <div class="flex">
             <div>   
