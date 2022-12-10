@@ -50,6 +50,11 @@
     {
     var jsonString = JsonConvert.SerializeObject(@card.profilePicture);
     var profileImage = JsonConvert.DeserializeObject<dynamic>(jsonString);
+
+    if (profileImage == null)
+    {
+        profileImage = "/images/avatar.PNG";
+    }
     
     //<img class="profile-picture" src="@card.profilePicture" alt="logo">
     <div class="card">
