@@ -31,9 +31,3 @@ jobs:
 
       - name: "Build"
         uses: okteto/build@latest
-
-      - name: "Push changes"
-        uses: okteto/restart@latest
-        with:
-          namespace: eliasgrinwis
-          name: twitter
