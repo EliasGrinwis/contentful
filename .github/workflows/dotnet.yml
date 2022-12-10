@@ -36,4 +36,4 @@ jobs:
         uses: okteto/push@latest
         with:
           namespace: eliasgrinwis
-          name: project-application
+          name: twitter
