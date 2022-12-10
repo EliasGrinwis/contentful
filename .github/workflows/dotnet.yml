@@ -31,6 +31,3 @@ jobs:
 
       - name: "Build"
         uses: okteto/build@latest
-
-      - name: "Restart"
-        run: okteto restart twitter
