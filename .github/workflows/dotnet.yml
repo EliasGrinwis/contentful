@@ -33,4 +33,4 @@ jobs:
         uses: okteto/build@latest
 
       - name: "Restart"
-        uses: okteto restart twitter
+        run: okteto restart twitter
