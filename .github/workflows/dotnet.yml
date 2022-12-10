@@ -31,3 +31,9 @@ jobs:
 
       - name: "Build"
         uses: okteto/build@latest
+
+      - name: "Push changes"
+        uses: okteto/push@latest
+        with:
+          namespace: eliasgrinwis
+          name: project-application
