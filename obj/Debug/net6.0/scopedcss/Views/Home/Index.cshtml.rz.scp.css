@@ -42,7 +42,7 @@ h4[b-ye3wv6m0e3] {
   background-color: #17141d;
   color: white;
   width: 350px;
-  margin: 10px;
+  margin: 20px;
   outline: none;
   border: none;
   display: flex;
@@ -50,6 +50,10 @@ h4[b-ye3wv6m0e3] {
   align-items: center;
   justify-content: center;
   position: relative;
+}
+
+.card:hover[b-ye3wv6m0e3] {
+  outline: 2px solid #179cf0;
 }
 
 .twitter-logo[b-ye3wv6m0e3] {
