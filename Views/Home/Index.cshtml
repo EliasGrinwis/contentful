@@ -3,15 +3,6 @@
 
 @model ContentfulCollection<TwitterUser>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Twitter Data</title>
-   
-</head>
-<body>
     @{var followers_counter = 0;}
     
     <div class="mainUser">
@@ -25,7 +16,7 @@
             </div>
             <div class="name-id">
                 <p>@@EliasGrinwis</p>
-                <p>1488143836597657605</p>
+                <p class="id">1488143836597657605</p>
             </div>
         </div>
         <div class="button-parent">
@@ -55,7 +46,6 @@
         profileImage = "/images/avatar.PNG";
     }
     
-    //<img class="profile-picture" src="@card.profilePicture" alt="logo">
     <div class="card">
         <img class="twitter-logo" src="/images/Twitter_logo.png" alt="Twitter Logo">
         <img class="profile-picture" src="@profileImage.fields.file.url" alt="logo">
@@ -67,7 +57,7 @@
             </div>
             <div class="name-id">
                 <p>@@@card.username</p>
-                <p>@card.id</p>
+                <p class="id">@card.id</p>
             </div>
         </div>
         <div class="button-parent">
@@ -80,9 +70,3 @@
     </div>
     }
     </div>
-</body>
-</html>
-
-
-    
-

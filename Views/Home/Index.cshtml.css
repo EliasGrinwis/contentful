@@ -26,6 +26,7 @@ h4 {
   margin-bottom: 30px;
   color: white;
   outline: 2px solid #179cf0;
+  box-shadow: #179cf0 0px 19px 38px, #179cf0 0px 15px 12px;
 }
 
 .header {
@@ -44,7 +45,6 @@ h4 {
   width: 350px;
   margin: 20px;
   outline: none;
-  border: none;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -81,6 +81,9 @@ h4 {
 
 .name-id {
   text-align: right;
+}
+
+.id {
   text-decoration: underline;
 }
 

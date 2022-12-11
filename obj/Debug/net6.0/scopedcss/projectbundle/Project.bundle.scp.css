@@ -27,6 +27,7 @@ h4[b-ye3wv6m0e3] {
   margin-bottom: 30px;
   color: white;
   outline: 2px solid #179cf0;
+  box-shadow: #179cf0 0px 19px 38px, #179cf0 0px 15px 12px;
 }
 
 .header[b-ye3wv6m0e3] {
@@ -45,7 +46,6 @@ h4[b-ye3wv6m0e3] {
   width: 350px;
   margin: 20px;
   outline: none;
-  border: none;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -82,6 +82,9 @@ h4[b-ye3wv6m0e3] {
 
 .name-id[b-ye3wv6m0e3] {
   text-align: right;
+}
+
+.id[b-ye3wv6m0e3] {
   text-decoration: underline;
 }
 
@@ -113,6 +116,9 @@ button[b-ye3wv6m0e3] {
 /* _content/Project/Views/Shared/_Layout.cshtml.rz.scp.css */
 /* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
+*[b-9q8ibpt6yd] {
+  font-family: "Ubuntu", sans-serif;
+}
 
 a.navbar-brand[b-9q8ibpt6yd] {
   white-space: normal;
