@@ -20,9 +20,8 @@ if (!app.Environment.IsDevelopment())
 ContentfulSetup contentfulSetup = new ContentfulSetup();
 // contentfulSetup.create_content_type();
 // contentfulSetup.create_assets();
+// Thread.Sleep(10000);
 // contentfulSetup.create_entries();
-
-//contentfulSetup.link_asset_with_entry();
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();

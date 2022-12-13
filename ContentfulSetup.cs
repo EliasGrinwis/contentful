@@ -74,7 +74,6 @@ public class ContentfulSetup
         var counter = 1;
         var entry = new Entry<dynamic>();
 
-        // Loop 13 times to make 13 entries
         foreach (var result in twitter_id_list.Zip(twitter_name_list, (first, second) => new { object1 = first, object2 = second })
             .Zip(twitter_username_list, (first, second) => new { object1 = first.object1, object2 = first.object2, object3 = second }))
         {
@@ -84,9 +83,6 @@ public class ContentfulSetup
             entry.SystemProperties = new SystemProperties();
             entry.SystemProperties.Id = new_id;
             entry.SystemProperties.Version = 1;
-
-            //String new_asset_id = "asset" + counter;
-            //var asset = await client.GetAsset(new_asset_id);
 
             entry.Fields = new
             {
@@ -157,45 +153,6 @@ public class ContentfulSetup
             Thread.Sleep(250); // wait 250ms to make sure the asset is processed
             await client.PublishAsset(new_asset_id, 2);
 
-            counter++;
-        }
-    }
-
-    public async void link_asset_with_entry()
-    {
-
-        var httpClient = new HttpClient();
-        var client = new ContentfulManagementClient(httpClient, "CFPAT-YXYuAEil2xQAg_cE3ngWeVupEuLue2aSI5HCxE-iUaU", "jlvdks7mf5c1");
-
-        TwitterData twitterData = new TwitterData();
-        var twitter_id_list = twitterData.twitter_id_list_function();
-        var twitter_name_list = twitterData.twitter_name_list_function();
-        var twitter_username_list = twitterData.twitter_username_list_function();
-
-        var counter = 1;
-        var entry = new Entry<dynamic>();
-
-        // Loop 13 times to make 13 entries
-        foreach (var result in twitter_id_list.Zip(twitter_name_list, (first, second) => new { object1 = first, object2 = second })
-            .Zip(twitter_username_list, (first, second) => new { object1 = first.object1, object2 = first.object2, object3 = second }))
-        {
-
-            String new_id = "user" + counter;
-
-            entry.SystemProperties = new SystemProperties();
-            entry.SystemProperties.Id = new_id;
-            entry.SystemProperties.Version = 1;
-
-            entry.Fields = new
-            {
-                profilePicture = new Dictionary<string, object>()
-            {
-                { "en-US", new Asset() { SystemProperties = new SystemProperties() { LinkType = "Asset", Id = "asset" + counter, Type = "Link" } } }
-            }
-            };
-
-            var newEntry = await client.CreateOrUpdateEntry(entry, contentTypeId: contentTypeId);
-            await client.PublishEntry(new_id, 1);
             counter++;
         }
     }
