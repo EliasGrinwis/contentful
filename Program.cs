@@ -17,7 +17,7 @@ if (!app.Environment.IsDevelopment())
 }
 
 // HERE WE SETUP CONTENTFUL
-// ContentfulSetup contentfulSetup = new ContentfulSetup();
+ContentfulSetup contentfulSetup = new ContentfulSetup();
 // contentfulSetup.create_content_type();
 // contentfulSetup.create_assets();
 // Thread.Sleep(10000);   // wait 10 seconds for contentful to create the content type
